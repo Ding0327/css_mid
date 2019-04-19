@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #191919;
+}
+
+.button {
+  display: inline-block;
+  margin: 20px;
+  top: 20px;
+  left: 75%;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #26C9A3;
+  border-bottom: solid 7px #2FEDC1;
+  color: white;
+  font-family: 微軟正黑體;
+  font-weight: bold;
+  font-spacing: 1px;
+}
+
+.container {
+  height: 100px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.circle {
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  transform: scale(0);
+  animation: bulge 2s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+  background-color: #2F5973;
+  animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+  background-color: #9CD9CE;
+  animation-delay: 0.25s;
+}
+
+.circle:nth-child(3) {
+  background-color: #F2F0F1;
+  animation-delay: 0.5s;
+}
+
+.circle:nth-child(4) {
+  background-color: #F2A668;
+  animation-delay: 0.75s;
+}
+
+.circle:nth-child(5) {
+  background-color: #F26628;
+  animation-delay: 1s;
+}
+
+@keyframes bulge {
+  50% {
+    transform: scale(1);
+  }
+}
+.line-1 {
+  font-family: "Anonymous Pro", monospace;
+  position: fixed;
+  top: 90%;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 200%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter {
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
